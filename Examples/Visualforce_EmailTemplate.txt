@@ -1,0 +1,17 @@
+<messaging:emailTemplate subject="A Medical Inquiry has been submitted" recipientType="User" relatedToType="Medical_Inquiry_vod__c">
+<messaging:htmlEmailBody >
+<html><body>
+Med Inquiry Id: {!relatedTo.Id} <br></br>
+Signature: Attached as PNG 
+</body></html>
+</messaging:htmlEmailBody>
+<messaging:attachment renderas="pdf" filename="signature.pdf">
+        <html>
+        <body>
+<html><body>
+Please find attached signature related to this MI: {!relatedTo.Id}
+</body></html>
+        </body>
+        </html>
+    </messaging:attachment>
+</messaging:emailTemplate>
