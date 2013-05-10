@@ -3,11 +3,11 @@ VeevaMedicalInquiryEmail
 
 Medical Inquiry Email based on Email Template with Signature Attachment
 
-Apex Class:  emailHelper
-Method Summary:
-  public static void sendEmail(ID recipientId, ID medicalInquiryId) 
+Apex Class:  emailHelper <br/>
+Method Summary:<br/>
+  public static void sendEmail(ID recipientId, ID medicalInquiryId) <br/>
 
-sendEmail  
+<h2>sendEmail  </h2>
   public static void sendEmail(ID recipientId, ID medicalInquiryId)
   
   This function takes a medical inquiry record and emails it to a recipient.  The content of the email is constructed using an email template that merges 
@@ -18,14 +18,14 @@ sendEmail
   In terms of logic, this class decodes the signature stored on the MI record and attaches it to the email as a binary PNG file.  
   It will call the salesforce mail merge functionality by passing in the MI record and email template to generate the email body.
   
-  Parameters:
-		recipientId			salesforce Id of the intended recipient of the email
-		medicalInquiryId	salesforce Id of the medical inquiry record for the mail merge fields and signature will be extracted
-  Returns:
-		void
+  Parameters:<br/>
+		recipientId			salesforce Id of the intended recipient of the email<br/>
+		medicalInquiryId	salesforce Id of the medical inquiry record for the mail merge fields and signature will be extracted<br/>
+  Returns:<br/>
+		void<br/>
 
 
-Sample usage:
+Sample usage:<br/>
   emailHelper.sendEmail('005i0000000hBMn', 'a0ui0000000CsB2AAK');
   
 
